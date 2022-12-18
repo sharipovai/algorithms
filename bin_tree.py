@@ -28,13 +28,9 @@ class Bin_tree:
         print(self.value, end=' ')
         if self.right_node:
             print(self.right_node, end='')
-        return ""
-            
-        
-        
-        
+        return ""     
 
-a = [0, 5, -9, -10, 8, 4 , 1, 2, 3, -6, -4]
+a = [0, 5, -9, -10, 8, 4 , 1, 0, 3, -6, -10]
 b = [0, 5, -9, 10]
 
 bin_tree = Bin_tree(a)
