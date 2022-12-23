@@ -1,17 +1,9 @@
 def quick_sort(a):
-    if a == []:
-        return []
-    if len(a) == 1:
+    if len(a) <= 1:
         return a
-    center = []
-    left = []
-    right = []
-    center.append(a[0])
-    for i in range(1, len(a)):
-        if a[i] < center[0]:
-            left.append(a[i])
-        else:
-            right.append(a[i])
+    center = [i for i in a if i == a[0]]
+    left = list(filter(lambda x: x<a[0], a))
+    right = list(filter(lambda x: x>a[0], a))
     return quick_sort(left) + center + quick_sort(right)
 
 a = [9, 5, 7, -5, 0, 0, 1]
